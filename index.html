@@ -1,49 +1,31 @@
 <!DOCTYPE html>
-<html>
+<link rel="stylesheet" href="styles.css">
+<script src="KeyTriggers.js"></script>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Virtual Piano</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="KeyTriggers.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="headSpace"></div>
-    <div class="container" id="klavier">
-        <kbd class="white_keys">A</kbd>
-        <kbd class="black_keys"><p>W</p></kbd>
-        <kbd class="white_keys">S</kbd>
-        <kbd class="black_keys"><p>E</p></kbd>
-        <kbd class="white_keys">D</kbd>
-        <kbd class="white_keys">F</kbd>
-        <kbd class="black_keys"><p>T</p></kbd>
-        <kbd class="white_keys">G</kbd>
-        <kbd class="black_keys"><p>Z</p></kbd>
-        <kbd class="white_keys">H</kbd>
-        <kbd class="black_keys"><p>U</p></kbd>
-        <kbd class="white_keys">J</kbd>
-
+<div class="container">
+    <div class="white-keys">
+        <kbd>A</kbd>
+        <kbd>S</kbd>
+        <kbd>D</kbd>
+        <kbd>F</kbd>
+        <kbd>G</kbd>
+        <kbd>H</kbd>
+        <kbd>J</kbd>
     </div>
+    <div class="black-keys">
+        <kbd class="key-u">U</kbd>
+        <kbd class="key-y">Z</kbd>
+        <kbd class="key-t">T</kbd>
+        <kbd class="key-e">E</kbd>
+        <kbd class="key-w">W</kbd>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
-
-<!--
-
-In case the div solution does not pan out
-<div class="white_keys">
-            <kbd>A</kbd>
-            <kbd>S</kbd>
-            <kbd>D</kbd>
-            <kbd>F</kbd>
-            <kbd>G</kbd>
-            <kbd>H</kbd>
-            <kbd>J</kbd>
-        </div>
-        <div class="black_keys">
-            <kbd>W</kbd>
-            <kbd>E</kbd>
-            <kbd>T</kbd>
-            <kbd>Z</kbd>
-            <kbd>U</kbd>
-        </div>
-
--->
