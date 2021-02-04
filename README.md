@@ -1,2 +1,2 @@
 # fluffy-journey
-Embarking on the journey of creating an in Browser Piano
+A collection of reusable react components
