@@ -4,6 +4,8 @@ function App() {
 
   let audio;
   let audioSource;
+  let ton = new Audio("./src/white_keys/A2.mp3")
+  ton.play()
 
   let actualKeySet = new Set();
   actualKeySet.add('A');
@@ -22,7 +24,8 @@ function App() {
   window.addEventListener('keydown', (event) => {
       if(actualKeySet.has(event.key.toUpperCase())) {
           audioSource = event.key.toUpperCase();
-          audio = new Audio("http://www.piano-midi.de/mp3/albeniz/alb_esp1.mp3");
+          audio = new Audio();
+          audio.src = ("https://lmms.io/lsp/download_file.php?file=4346&name=Grand+Piano.wav")
           audio.play();
       }
       else {
