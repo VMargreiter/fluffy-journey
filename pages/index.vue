@@ -94,8 +94,8 @@
 export default {
   data() {
     return {
-      couple: "Jane & John",
-      weddingDate: "June 15, 2025",
+      couple: "Jazz & Val",
+      weddingDate: "March 7, 2026",
       rsvp: {
         name: '',
         email: '',
