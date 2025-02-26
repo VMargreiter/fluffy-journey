@@ -1,0 +1,1 @@
+export { default } from "file:///C:/Users/margr/Documents/GitHub/fluffy-journey/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"

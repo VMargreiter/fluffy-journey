@@ -1,75 +1,97 @@
-# Nuxt Minimal Starter
+# Wedding RSVP Application
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+An interactive web application built with Nuxt.js and PHP to collect and manage wedding RSVPs. The application features a beautiful design with green geometric graphics.
 
-## Setup
+## Features
 
-Make sure to install dependencies:
+- Interactive RSVP form
+- Wedding details page with venue information, schedule, and FAQs
+- Admin dashboard to view and manage RSVPs
+- Responsive design for mobile and desktop
+- Green geometric design elements
+- Secure database storage
 
-```bash
-# npm
-npm install
+## Technology Stack
 
-# pnpm
-pnpm install
+- **Frontend**: Nuxt.js (Vue.js framework)
+- **Backend**: PHP
+- **Database**: MySQL (Hetzner database)
+- **Styling**: Custom CSS with green geometric design elements
 
-# yarn
-yarn install
+## Project Structure
 
-# bun
-bun install
+```
+wedding-rsvp/
+├── components/
+│   ├── GeometricPattern.vue    # SVG pattern component for design elements
+│   └── Navigation.vue          # Site navigation component
+├── layouts/
+│   └── default.vue             # Main layout with geometric decorations
+├── pages/
+│   ├── index.vue               # RSVP form page
+│   ├── details.vue             # Wedding details page
+│   ├── admin.vue               # Admin dashboard
+│   └── login.vue               # Admin login page
+├── middleware/
+│   └── auth.js                 # Authentication middleware for admin pages
+├── assets/
+│   └── css/
+│       └── main.css            # Global CSS styles
+├── api/
+│   ├── rsvp.php                # API endpoint to submit RSVPs
+│   └── get-rsvps.php           # API endpoint to retrieve RSVPs for admin
+└── nuxt.config.js              # Nuxt.js configuration
 ```
 
-## Development Server
+## Setup Instructions
 
-Start the development server on `http://localhost:3000`:
+### Prerequisites
 
-```bash
-# npm
-npm run dev
+- Node.js (v14+ recommended)
+- PHP 7.4+
+- MySQL database (Hetzner)
 
-# pnpm
-pnpm dev
+### Installation
 
-# yarn
-yarn dev
+1. Clone the repository:
+   ```
+   git clone [repository-url]
+   cd wedding-rsvp
+   ```
 
-# bun
-bun run dev
-```
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-## Production
+3. Configure environment variables:
+   Create a `.env` file with the following variables:
+   ```
+   DB_HOST=ho7w.your-database.de
+   DB_NAME=jazzya_db1
+   DB_USER=jazzya_1
+   DB_PASS=VhRNJjx3efMJTZxy
+   ADMIN_PASSWORD=wedding2025
+   ```
 
-Build the application for production:
+4. Set up the database:
+   The database tables will be automatically created when the first RSVP is submitted.
 
-```bash
-# npm
-npm run build
+5. Development server:
+   ```
+   npm run dev
+   ```
 
-# pnpm
-pnpm build
+6. Production build:
+   ```
+   npm run build
+   npm run start
+   ```
 
-# yarn
-yarn build
+### PHP API Setup
 
-# bun
-bun run build
-```
+1. Make sure the PHP files in the `/api` directory are properly configured with your database credentials.
 
-Locally preview production build:
+2. For production, set up a PHP server to handle the API requests, or use a hosting provider that supports PHP and MySQL.
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+3. Update the `nuxt.config
