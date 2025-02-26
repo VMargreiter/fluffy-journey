@@ -13,6 +13,7 @@
             <input 
               type="text" 
               id="name" 
+              class="rsvp-input"
               v-model="rsvp.name" 
               required 
               placeholder="Enter your full name"
@@ -200,25 +201,24 @@ export default {
 }
 
 .rsvp-card {
-  background: white;
+  background: #212121;
   border-radius: 10px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   padding: 2.5rem;
   width: 100%;
   max-width: 600px;
   position: relative;
+  color: #FBFEFC;
 }
 
 h1 {
   font-size: 2.2rem;
-  color: #2E7D32;
   margin-bottom: 0.5rem;
   text-align: center;
 }
 
 .date {
   font-size: 1.2rem;
-  color: #555;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -237,12 +237,12 @@ h1 {
 
 label {
   font-weight: 500;
-  color: #333;
 }
 
 input, textarea {
   padding: 0.8rem;
   border: 1px solid #ddd;
+  background: #212121;
   border-radius: 4px;
   font-size: 1rem;
 }
