@@ -31,7 +31,7 @@
 export default {
   data() {
     return {
-      coupleName: "Jane & John",
+      coupleName: "Jazz & Val",
       mobileMenuOpen: false,
       navItems: [
         { label: 'Home', path: '/' },

@@ -93,8 +93,8 @@ export default {
   },
   data() {
     return {
-      coupleName: "Jane & John",
-      weddingDate: "June 15, 2025",
+      coupleName: "Jazz & Val",
+      weddingDate: "March 7, 2026",
       weddingTime: "4:00 PM",
       activeFaq: null,
       venue: {
