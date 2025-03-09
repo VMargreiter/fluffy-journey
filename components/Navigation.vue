@@ -65,7 +65,6 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
   padding: 1rem 0;
@@ -84,13 +83,13 @@ export default {
 }
 
 .logo a {
-  color: #2E7D32;
+  color: white;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .logo a:hover {
-  color: #1B5E20;
+  color: orange;
 }
 
 .nav-links {
@@ -105,7 +104,7 @@ export default {
 }
 
 .nav-links a {
-  color: #333;
+  color: white;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
@@ -113,7 +112,7 @@ export default {
 }
 
 .nav-links a:hover {
-  color: #2E7D32;
+  
 }
 
 .nav-links a:after {

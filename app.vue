@@ -3,7 +3,7 @@
     <div class="parallax-bg"></div>
     <div class="content-container">
       <NuxtLayout>
-        <NuxtPage />
+        <NuxtPage class="container" />
       </NuxtLayout>
     </div>
   </div>

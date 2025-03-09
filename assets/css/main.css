@@ -61,12 +61,11 @@
   
   /* Form controls */
   input, textarea, select {
-    width: 100%;
     padding: 0.8rem;
     border: 1px solid #ddd;
+    background: #212121;
     border-radius: 4px;
     font-size: 1rem;
-    font-family: 'Raleway', sans-serif;
     transition: border-color 0.3s;
   }
   

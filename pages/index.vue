@@ -1,8 +1,7 @@
 // pages/index.vue
 <template>
-  <div class="wedding-container">
-    <div class="geometric-bg"></div>
-    <div class="rsvp-card">
+  <div class="wedding-container bg-red">
+    <UCard class="rsvp-card">
       <h1>{{ couple }} Wedding</h1>
       <p class="date">{{ weddingDate }}</p>
       
@@ -87,12 +86,17 @@
           <button @click="resetForm" class="reset-btn">Submit Another Response</button>
         </div>
       </form>
-    </div>
+    </UCard>
   </div>
 </template>
 
 <script>
+import { UCard } from '#components';
+
 export default {
+  components: {
+    UCard
+  },
   data() {
     return {
       couple: "Jazz & Val",
@@ -156,165 +160,4 @@ export default {
 </script>
 
 <style scoped>
-.wedding-container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.geometric-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(#4CAF50 2px, transparent 2px),
-                    radial-gradient(#8BC34A 2px, transparent 2px);
-  background-size: 50px 50px;
-  background-position: 0 0, 25px 25px;
-  opacity: 0.15;
-  z-index: -1;
-}
-
-.geometric-bg::before, .geometric-bg::after {
-  content: '';
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border: 2px solid #4CAF50;
-  transform: rotate(45deg);
-  opacity: 0.2;
-}
-
-.geometric-bg::before {
-  top: -100px;
-  left: -100px;
-}
-
-.geometric-bg::after {
-  bottom: -100px;
-  right: -100px;
-}
-
-.rsvp-card {
-  background: #212121;
-  border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-  padding: 2.5rem;
-  width: 100%;
-  max-width: 600px;
-  position: relative;
-  color: #FBFEFC;
-}
-
-h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-.date {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.rsvp-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-label {
-  font-weight: 500;
-}
-
-input, textarea {
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  background: #212121;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-.radio-group {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.radio-group label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: normal;
-  cursor: pointer;
-}
-
-.submit-btn, .reset-btn {
-  background-color: #2E7D32;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 1rem;
-}
-
-.submit-btn:hover, .reset-btn:hover {
-  background-color: #1B5E20;
-}
-
-.confirmation {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.check-icon {
-  width: 70px;
-  height: 70px;
-  background-color: #4CAF50;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
-  color: white;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 600px) {
-  .rsvp-card {
-    padding: 1.5rem;
-  }
-  
-  h1 {
-    font-size: 1.8rem;
-  }
-  
-  .radio-group {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
 </style>
