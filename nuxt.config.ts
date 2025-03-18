@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     '@nuxt/ui'
   ],
   css: [
-    // Add any global CSS files
+    '@/assets/css/colors.css'
   ],
   // Expanded tailwindcss configuration
   tailwindcss: {

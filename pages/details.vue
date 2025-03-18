@@ -1,15 +1,6 @@
 // pages/details.vue
 <template>
   <div class="details-container">
-    <GeometricPattern 
-      :width="800" 
-      :height="800" 
-      position="absolute" 
-      primaryColor="#2E7D32"
-      secondaryColor="#4CAF50"
-      accentColor="#8BC34A"
-    />
-    
     <div class="details-card">
       <h1>{{ coupleName }}</h1>
       <p class="tagline">We're getting married!</p>
@@ -34,7 +25,8 @@
           <div class="venue-info">
             <h3>{{ venue.name }}</h3>
             <p>{{ venue.address }}</p>
-            <p>{{ venue.city }}, {{ venue.state }} {{ venue.zip }}</p>
+            <p>{{ venue.city }}</p>
+            <p>{{ venue.state }}</p>
             <a :href="venue.mapLink" target="_blank" class="map-link">View on Map</a>
           </div>
           <div class="venue-image">
@@ -85,12 +77,8 @@
 </template>
 
 <script>
-import GeometricPattern from '../components/GeometricPattern.vue'
 
 export default {
-  components: {
-    GeometricPattern
-  },
   data() {
     return {
       coupleName: "Jazz & Val",
@@ -98,11 +86,10 @@ export default {
       weddingTime: "4:00 PM",
       activeFaq: null,
       venue: {
-        name: "Green Meadows Estate",
-        address: "123 Wedding Lane",
-        city: "Lakeside",
-        state: "CA",
-        zip: "92101",
+        name: "Gigis Rooftop Bar",
+        address: "118 St Georges Mall",
+        city: "Cape Town",
+        state: "South Africa",
         mapLink: "https://maps.google.com"
       },
       schedule: [
@@ -191,7 +178,7 @@ export default {
 
 <style scoped>
 .details-container {
-  min-height: 100vh;
+  min-height: calc(100vh - 150px); /* Adjusted to account for navbar and footer */
   padding: 3rem 1rem;
   display: flex;
   justify-content: center;
@@ -200,7 +187,9 @@ export default {
 }
 
 .details-card {
-  background: white;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 3rem; ;
   border-radius: 10px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   padding: 3rem;
@@ -220,7 +209,7 @@ h1 {
 .tagline {
   text-align: center;
   font-size: 1.2rem;
-  color: #666;
+  color: #cccccc;
   margin-bottom: 2.5rem;
 }
 
@@ -299,7 +288,6 @@ h2 {
 }
 
 .venue-info h3 {
-  color: #333;
   margin-bottom: 0.5rem;
 }
 

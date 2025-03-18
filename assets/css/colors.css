@@ -1,0 +1,12 @@
+:root {
+  --primary: #00A896; /* Changed to teal */
+  --primary-light: #1AC9B7; /* Lighter teal */
+  --primary-dark: #007F6F; /* Darker teal */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --background: #2d2d2d;
+  --success: #4CAF50;
+  --accent-bg: #E8F5F3; /* Light teal background for highlights */
+  --border-color: #B2E4DE; /* Light teal for borders */
+  --hover-bg: #B2E4DE; /* Light teal for hover states */
+}
